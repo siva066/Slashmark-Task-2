@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Keyboard Event Test</title>
+  <script type="module">  // Enable ES module usage
+    import Keyboard from './keyboard.js'; 
+
+    const keyboard = new Keyboard();
+
+    keyboard.on('keydown', (event) => {
+      console.log('Key pressed:', event.key, '(', event.combinedKey, ')');
+    });
+
+    keyboard.on('keyup', (event) => {
+      console.log('Key released:', event.key);
+    });
+
+    keyboard.start();
+  </script>
+</head>
+<body>
+  <h1>Keyboard Event Test</h1>
+  <p>Open your browser's developer console to see the keyboard events.</p>
+</body>
+</html>
